@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <title>Jesús Germán Ticona Aquije - Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- data-theme="light" por defecto -->
+<body data-theme="light">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <span class="logo-icon">&lt;/&gt;</span> Jesús.dev
+        </div>
+        <nav class="navbar__links">
+            <a href="#home">Inicio</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+        <div class="navbar__actions">
+            <!-- Botón dark mode -->
+            <button id="theme-toggle" class="btn btn--outline theme-toggle" aria-label="Cambiar tema">🌙</button>
+            <a href="#contact" class="btn btn--primary">Contrátame</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="hero__content">
+                <span class="hero__greeting">Hola — Construyo para la web</span>
+                <h1 class="hero__title">Junior Frontend Developer — Creando apps web accesibles y de alto rendimiento</h1>
+                <p class="hero__description">
+                    Soy un desarrollador web de Perú. Me especializo en crear interfaces responsivas y arquitecturas frontend confiables utilizando HTML5, CSS3 y JavaScript. Explora mis proyectos y descubre cómo puedo aportar valor a tu próximo producto web.
+                </p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">Explorar Proyectos</a>
+                    <a href="https://github.com/zMyo-gg" target="_blank" class="btn btn--outline">Mi GitHub</a>
+                </div>
+            </div>
+            
+            <div class="hero__profile-card">
+                <div class="profile-card__header">
+                    <img src="./images/Perfil.jpg" alt="Jesús Germán Ticona" class="profile-card__img">
+                    <div>
+                        <h3 class="profile-card__name">Jesús Ticona</h3>
+                        <p class="profile-card__role">Frontend Developer — Freelancer</p>
+                    </div>
+                </div>
+                <p class="profile-card__bio">
+                    Desarrollador enfocado en el detalle. Experiencia creando sitios en Netlify y servicios en plataformas como Fiverr.
+                </p>
+                <div class="profile-card__stats">
+                    <div class="stat"><strong id="project-count">0</strong><span>Proyectos</span></div>
+                    <div class="stat"><strong>Fiverr</strong><span>Freelance</span></div>
+                    <div class="stat"><strong>28</strong><span>Años</span></div>
+                </div>
+        </section>
+
+        <!-- PROJECTS GALLERY -->
+        <section id="projects" class="projects">
+            <h2>Galería de Proyectos</h2>
+            <p>Una selección de mis proyectos web incluyendo plantillas y aplicaciones interactivas.</p>
+            
+            <div class="projects__filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+                <button class="filter-btn" data-filter="js">JavaScript</button>
+    <!--            <button class="filter-btn" data-filter="cms">WordPress</button>  -->
+            </div>
+
+            <div class="projects__grid">
+                <!-- PROYECTO: Calculadora Multitema -->
+                <article class="project-card" data-category="js">
+                    <img src="./images/Proyectos/calculadora-multitema.jpg" alt="Bento Grid Project" class="project-card__img" style="object-fit: cover; display: block;">
+                    <div class="project-card__content">
+                        <h3>Calculadora Multi-Tema</h3>
+                        <p>App de calculadora interactiva con cambio de temas usando variables CSS y manipulación del DOM.</p>
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/calculator-app-main/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+                            <a href="#" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROYECTO: Social Links Profile -->
+                <article class="project-card" data-category="html-css">
+                    
+                    <img src="images/Proyectos/social-links.jpg" alt="Social Links Profile" class="project-card__img" style="object-fit: cover; display: block;">
+                    
+                    <div class="project-card__content">
+                        <h3>Social Links Profile</h3>
+                        <p>Tarjeta de perfil con enlaces sociales centrada y responsiva, ideal como componente reutilizable en portafolios y dashboards.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>Flexbox</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/social-links-profile-main/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+
+                            <a href="https://github.com/zmyo-gg/social-links-profile-main" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- PROYECTO: BENTO GRID -->
+                <article class="project-card" data-category="html-css">
+                    <img src="./images/Proyectos/bento-grid.jpg" alt="Bento Grid Project" class="project-card__img" style="object-fit: cover; display: block;">
+                    
+                    <div class="project-card__content">
+                        <h3>Bento Grid</h3>
+                        <p>Diseño de cuadrícula asimétrica estilo Bento totalmente responsivo, maquetado para adaptarse a diferentes tamaños de pantalla.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>CSS Grid</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/bento-grid/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+
+                            <a href="https://github.com/zmyo-gg/bento-grid" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- PROYECTO: Browser Extensions -->
+                <article class="project-card" data-category="js">
+                    
+                    <!-- Recuerda guardar la captura de pantalla en tu carpeta de imágenes -->
+                    <img src="./images/Proyectos/browser-extensions.jpg"  alt="Browser Extensions" class="project-card__img" style="object-fit: cover; display: block;">
+                    
+                    <div class="project-card__content">
+                        <h3>Browser Extensions</h3>
+                        <p>Tarjetas de descarga para extensiones de navegador. Diseño limpio, moderno y totalmente adaptable a dispositivos móviles.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/browser-extensions/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+
+                            <a href="https://github.com/zmyo-gg/browser-extensions" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills">
+            <div class="skills__main">
+                <h2>Habilidades y Competencia</h2>
+                <p>Desglose de mis habilidades de desarrollo web core y experiencia práctica.</p>
+                
+                <div class="skill-item">
+                    <div class="skill-item__header">
+                        <h3>HTML & CSS — Maquetado semántico y responsivo</h3>
+                        <span class="skill-item__level">★★★★★</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                    <p>Experto en estructurar sitios web accesibles, uso de Flexbox/Grid y animaciones. Enfoque mobile-first.</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-item__header">
+                        <h3>JavaScript — DOM, ES6+, interactividad</h3>
+                        <span class="skill-item__level">★★★★☆</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                    <p>Cómodo creando lógica asíncrona, manipulación del DOM y desarrollo de funcionalidades interactivas.</p>
+                </div>
+            </div>
+
+            <aside class="skills__sidebar">
+                <div class="sidebar-box">
+                    <h3>Frameworks y Herramientas</h3>
+                    <div class="tools-grid">
+                       <!-- <span class="tool-tag">WordPress</span> 
+                        <span class="tool-tag">Netlify</span>  -->
+                        <span class="tool-tag">GitHub</span>
+                        <span class="tool-tag">Fiverr (Freelance)</span>
+                        <span class="tool-tag">Figma</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="contact__form-container">
+                <h2>Ponte en contacto</h2>
+                <p>Estoy disponible para proyectos freelance y oportunidades a tiempo completo.</p>
+                <form id="contactForm" class="form">
+                    <div class="form-group">
+                        <label>Nombre completo</label>
+                        <input type="text" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Correo electrónico</label>
+                        <input type="email" placeholder="juan@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea rows="4" placeholder="Háblame de las metas de tu proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+                </form>
+            </div>
+            
+            <div class="contact__info">
+                <div class="info-card">
+                    <h3>Contacto Rápido</h3>
+                    <p>Ubicación: <strong>Ica, Perú</strong></p>
+                    <p>Email: <strong>jesustl1232@gmail.com</strong></p>
+                    <p>Respuesta típica: 2 - 4 horas.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://github.com/zmyo-gg" target="_blank" class="btn btn--outline btn--small">GitHub</a>
+                        <a href="https://es.fiverr.com/TU_USUARIO" target="_blank" class="btn btn--outline btn--small">Fiverr</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Jesús Germán Ticona Aquije — Diseñado y construido con dedicación.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
