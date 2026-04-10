@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
-    <title>Jesús Germán Ticona Aquije - Frontend Developer</title>
+    <title> Tic.dev - Frontend Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="navbar__logo">
-            <span class="logo-icon">&lt;/&gt;</span> Jesús.dev
+            <span class="logo-icon">&lt;/&gt;</span> Tic.dev
         </div>
         <nav class="navbar__links">
             <a href="#home">Inicio</a>
@@ -59,7 +59,7 @@
                 </p>
                 <div class="profile-card__stats">
                     <div class="stat"><strong id="project-count">0</strong><span>Proyectos</span></div>
-                    <div class="stat"><strong>Fiverr</strong><span>Freelance</span></div>
+                    <div class="stat"><strong>Freelancer</strong></div>
                     <div class="stat"><strong>28</strong><span>Años</span></div>
                 </div>
         </section>
@@ -69,17 +69,71 @@
             <h2>Galería de Proyectos</h2>
             <p>Una selección de mis proyectos web incluyendo plantillas y aplicaciones interactivas.</p>
             
-            <div class="projects__filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
-                <button class="filter-btn" data-filter="js">JavaScript</button>
-    <!--            <button class="filter-btn" data-filter="cms">WordPress</button>  -->
-            </div>
+                    <div class="projects__filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+                        <button class="filter-btn" data-filter="js">JavaScript</button>
+            <!--            <button class="filter-btn" data-filter="cms">WordPress</button>  -->
+                    </div>
 
             <div class="projects__grid">
+                <!-- PROYECTO: Digital Bank Landing Page -->
+                <article class="project-card" data-category="html-css">
+                    <img src="./images/Proyectos/digitalbank.jpg" alt="Digital Bank Landing Page" class="project-card__img">
+                    <div class="project-card__content">
+                        <h3>Digital Bank Landing Page</h3>
+                        <p>Landing page moderna y responsiva para una institución financiera. Destaca por su diseño limpio, posicionamiento avanzado de fondos y un menú de navegación móvil interactivo.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/digitalbank/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+                            <a href="https://github.com/zmyo-gg/digitalbank" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- PROYECTO: Multi-Step Form -->
+                <article class="project-card" data-category="js">
+                    <img src="./images/Proyectos/multi-step-form.jpg" alt="Multi-Step Form" class="project-card__img">                    
+                    <div class="project-card__content">
+                        <h3>Multi-Step Form</h3>
+                        <p>Formulario interactivo de múltiples pasos. Incluye validación de campos, selección de planes (mensual/anual), cálculo dinámico de precios y un resumen final antes de confirmar.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/multi-step-form/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+                            <a href="https://github.com/zmyo-gg/multi-step-form" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- PROYECTO: Browser Extensions -->
+                <article class="project-card" data-category="js">
+                    <img src="./images/Proyectos/browser-extensions.jpg"  alt="Browser Extensions" class="project-card__img">
+                    
+                    <div class="project-card__content">
+                        <h3>Browser Extensions</h3>
+                        <p>Tarjetas de descarga para extensiones de navegador. Diseño limpio, moderno y totalmente adaptable a dispositivos móviles.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/browser-extensions/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+
+                            <a href="https://github.com/zmyo-gg/browser-extensions" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- PROYECTO: Calculadora Multitema -->
                 <article class="project-card" data-category="js">
-                    <img src="./images/Proyectos/calculadora-multitema.jpg" alt="Bento Grid Project" class="project-card__img" style="object-fit: cover; display: block;">
+                    <img src="./images/Proyectos/calculadora-multitema.jpg" alt="Bento Grid Project" class="project-card__img">
                     <div class="project-card__content">
                         <h3>Calculadora Multi-Tema</h3>
                         <p>App de calculadora interactiva con cambio de temas usando variables CSS y manipulación del DOM.</p>
@@ -88,15 +142,33 @@
                         </div>
                         <div class="project-card__links">
                             <a href="https://zmyo-gg.github.io/calculator-app-main/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
-                            <a href="#" class="btn btn--outline btn--small">Ver Código</a>
+                            
                         </div>
                     </div>
                 </article>
 
+                <!-- PROYECTO: FAQ Accordion -->
+                <article class="project-card" data-category="js">
+                    <img src="./images/Proyectos/faq-accordion.jpg" alt="FAQ Accordion" class="project-card__img">
+                    
+                    <div class="project-card__content">
+                        <h3>FAQ Accordion</h3>
+                        <p>Componente interactivo de preguntas frecuentes. Utiliza JavaScript para la lógica de acordeón, permitiendo mostrar u ocultar múltiples respuestas.</p>
+                        
+                        <div class="project-card__tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        
+                        <div class="project-card__links">
+                            <a href="https://zmyo-gg.github.io/faq-accordion/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
+                            <a href="https://github.com/zmyo-gg/faq-accordion" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
+                        </div>
+                    </div>
+                </article>
                 <!-- PROYECTO: Social Links Profile -->
                 <article class="project-card" data-category="html-css">
                     
-                    <img src="images/Proyectos/social-links.jpg" alt="Social Links Profile" class="project-card__img" style="object-fit: cover; display: block;">
+                    <img src="./images/Proyectos/social-links.jpg" alt="Social Links Profile" class="project-card__img">
                     
                     <div class="project-card__content">
                         <h3>Social Links Profile</h3>
@@ -115,7 +187,7 @@
                 </article>
                 <!-- PROYECTO: BENTO GRID -->
                 <article class="project-card" data-category="html-css">
-                    <img src="./images/Proyectos/bento-grid.jpg" alt="Bento Grid Project" class="project-card__img" style="object-fit: cover; display: block;">
+                    <img src="./images/Proyectos/bento-grid.jpg" alt="Bento Grid Project" class="project-card__img">
                     
                     <div class="project-card__content">
                         <h3>Bento Grid</h3>
@@ -129,27 +201,6 @@
                             <a href="https://zmyo-gg.github.io/bento-grid/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
 
                             <a href="https://github.com/zmyo-gg/bento-grid" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- PROYECTO: Browser Extensions -->
-                <article class="project-card" data-category="js">
-                    
-                    <!-- Recuerda guardar la captura de pantalla en tu carpeta de imágenes -->
-                    <img src="./images/Proyectos/browser-extensions.jpg"  alt="Browser Extensions" class="project-card__img" style="object-fit: cover; display: block;">
-                    
-                    <div class="project-card__content">
-                        <h3>Browser Extensions</h3>
-                        <p>Tarjetas de descarga para extensiones de navegador. Diseño limpio, moderno y totalmente adaptable a dispositivos móviles.</p>
-                        
-                        <div class="project-card__tags">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                        </div>
-                        
-                        <div class="project-card__links">
-                            <a href="https://zmyo-gg.github.io/browser-extensions/" target="_blank" class="btn btn--primary btn--small">Ver Sitio</a>
-
-                            <a href="https://github.com/zmyo-gg/browser-extensions" target="_blank" class="btn btn--outline btn--small">Ver Código</a>
                         </div>
                     </div>
                 </article>
@@ -188,8 +239,10 @@
                        <!-- <span class="tool-tag">WordPress</span> 
                         <span class="tool-tag">Netlify</span>  -->
                         <span class="tool-tag">GitHub</span>
-                        <span class="tool-tag">Fiverr (Freelance)</span>
+                        <span class="tool-tag">Visual Studio Code</span>
                         <span class="tool-tag">Figma</span>
+                        <span class="tool-tag">Chrome DevTools</span>
+                        <span class="tool-tag">React</span>
                     </div>
                 </div>
             </aside>
