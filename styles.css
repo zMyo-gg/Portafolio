@@ -5,8 +5,8 @@
     --text-main: #111827;
     --text-muted: #4b5563;
     --bg-main: #ffffff;
-    --bg-alt: #f9fafb;
-    --border-color: #e5e7eb;
+    --bg-alt: #cad0d6;
+    --border-color: #c2c8d4;
     --font-family: 'Inter', sans-serif;
     --radius: 12px;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -63,12 +63,12 @@ body {
 }
 
 .btn--outline {
-    background-color: transparent;
+    background-color: var(--primary);
     border: 1px solid var(--border-color);
-    color: var(--text-main);
+    color: white;
 }
 .btn--outline:hover {
-    border-color: var(--text-muted);
+    background-color: var(--primary-hover);
 }
 
 .btn--small {
@@ -205,6 +205,7 @@ section > p {
 .profile-card__img { 
     border-radius: 50%;
     object-fit: cover;
+    display: block;
     width: 80px;
     height: 80px;
 }
@@ -228,7 +229,36 @@ section > p {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--border-color);
-    padding-top: 20px;
+    padding: 20px;
+}
+
+.profile-card__social {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 1px;
+}
+
+.profile-card__social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+}
+
+.profile-card__social img {
+    width: 36px;
+    height: 36px;
+}
+
+.profile-card__social a:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-1px);
 }
 
 .stat {
@@ -412,6 +442,34 @@ section > p {
     margin-bottom: 80px;
 }
 
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.contact-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.contact-social img {
+    width: 36px;
+    height: 36px;
+}
+
+.contact-social:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -457,7 +515,7 @@ section > p {
 .footer {
     text-align: center;
     padding: 30px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--text-main);
     color: var(--text-muted);
     transition: border-color 0.3s ease;
 }
