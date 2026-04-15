@@ -73,10 +73,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. SIMULACIÓN DE FORMULARIO DE CONTACTO
     // ==========================================
     const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
+    if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('¡Gracias por tu mensaje! (Esta es una simulación visual)');
+
+            const formData = new FormData(contactForm);
+            const nombre = formData.get('nombre');
+            const email = formData.get('email');
+            const mensaje = formData.get('mensaje');
+
+            const destinatario = 'jesustl1232@gmail.com'; // <-- email de destino
+            const asunto = encodeURIComponent(`Nuevo mensaje desde el portafolio de ${nombre}`);
+            const cuerpo = encodeURIComponent(
+                `Nombre: ${nombre}\n` +
+                `Email: ${email}\n\n` +
+                `Mensaje:\n${mensaje}`
+            );
+
+            // Construimos el enlace mailto
+            const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+
+            // Abrimos el cliente de correo
+            window.location.href = mailtoLink;
+
+            // Opcional: limpiar el formulario
             contactForm.reset();
         });
     }
