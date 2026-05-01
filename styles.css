@@ -520,6 +520,10 @@ section > p {
     transition: border-color 0.3s ease;
 }
 
+/* Evitar que Bootstrap cambie demasiado tu tipografía base */
+body {
+    font-family: var(--font-family) !important;
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

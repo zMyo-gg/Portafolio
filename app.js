@@ -114,4 +114,61 @@ document.addEventListener('DOMContentLoaded', () => {
     if (projectCountElement) {
         projectCountElement.textContent = totalProjects;
     }
+
+        // ==========================================
+    // LÓGICA DE IDIOMA (ES / EN)
+    // ==========================================
+    const langToggle = document.getElementById('lang-toggle');
+
+    const translations = {
+        es: {
+            nav_hire: 'Contrátame',
+            hero_greeting: 'Hola — Construyo para la web',
+            hero_title: 'Junior Frontend Developer — Creando apps web accesibles y de alto rendimiento',
+            hero_desc: 'Soy un desarrollador web de Perú. Me especializo en crear interfaces responsivas y arquitecturas frontend confiables utilizando HTML5, CSS3 y JavaScript. Explora mis proyectos y descubre cómo puedo aportar valor a tu próximo producto web.',
+            projects_title: 'Galería de Proyectos',
+            projects_subtitle: 'Una selección de mis proyectos web incluyendo plantillas y aplicaciones interactivas.',
+            skills_title: 'Habilidades y Competencia',
+            contact_title: 'Ponte en contacto',
+            contact_subtitle: 'Estoy disponible para proyectos freelance y oportunidades a tiempo completo.'
+        },
+        en: {
+            nav_hire: 'Hire Me',
+            hero_greeting: 'Hi — I build for the web',
+            hero_title: 'Junior Frontend Developer — Building accessible, performant web apps',
+            hero_desc: 'I am a web developer based in Chincha Alta, Ica, Peru. I focus on creating responsive interfaces and reliable front-end architectures using HTML5, CSS3 and JavaScript. Explore my projects and see how I can help with your next web product.',
+            projects_title: 'Projects Gallery',
+            projects_subtitle: 'A curated selection of web projects including templates and interactive apps.',
+            skills_title: 'Skills & Proficiency',
+            contact_title: 'Get in touch',
+            contact_subtitle: 'I am available for freelance work and full‑time opportunities.'
+        }
+    };
+
+    const applyTranslations = (lang) => {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const text = translations[lang][key];
+            if (text) el.textContent = text;
+        });
+        // Cambiar texto del botón
+        if (langToggle) {
+            langToggle.textContent = lang.toUpperCase();
+        }
+        // Guardar preferencia
+        localStorage.setItem('portfolioLang', lang);
+    };
+
+    // Cargar idioma guardado o ES por defecto
+    const savedLang = localStorage.getItem('portfolioLang') || 'es';
+    applyTranslations(savedLang);
+
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const current = localStorage.getItem('portfolioLang') || 'es';
+            const next = current === 'es' ? 'en' : 'es';
+            applyTranslations(next);
+        });
+    }
 });

@@ -25,6 +25,8 @@
             <a href="#contact">Contacto</a>
         </nav>
         <div class="navbar__actions">
+            <!-- Selector de idioma -->
+            <button id="lang-toggle" class="btn btn--outline btn--small" aria-label="Cambiar idioma">ES</button>
             <!-- Botón dark mode -->
             <button id="theme-toggle" class="btn btn--outline theme-toggle" aria-label="Cambiar tema">🌙</button>
             <a href="#contact" class="btn btn--primary">Contactame</a>
@@ -35,9 +37,9 @@
         <!-- HERO SECTION -->
         <section id="home" class="hero">
             <div class="hero__content">
-                <span class="hero__greeting">Hola — Construyo para la web</span>
-                <h1 class="hero__title">Junior Frontend Developer — Creando apps web accesibles y de alto rendimiento</h1>
-                <p class="hero__description">
+                <span class="hero__greeting" data-i18n="hero_greeting">Hola — Construyo para la web</span>
+                <h1 class="hero__title" data-i18n="hero_title">Junior Frontend Developer — Creando apps web accesibles y de alto rendimiento</h1>
+                <p class="hero__description" data-i18n="hero_desc">
                     Soy un desarrollador web de Perú. Me especializo en crear interfaces responsivas y arquitecturas frontend confiables utilizando HTML5, CSS3 y JavaScript. Explora mis proyectos y descubre cómo puedo aportar valor a tu próximo producto web.
                 </p>
                 <div class="hero__actions">
@@ -55,7 +57,7 @@
                     </div>
                 </div>
                 <p class="profile-card__bio">
-                    Desarrollador enfocado en el detalle. Experiencia creando sitios en Netlify y servicios en plataformas como Fiverr.
+                    Desarrollador enfocado en el detalle. Experiencia creando sitios en Netlify y servicios en plataformas como Freelancer.
                 </p>
                 <div class="profile-card__stats">
                     <div class="stat"><strong id="project-count">0</strong><span>Proyectos</span></div>
@@ -64,19 +66,22 @@
                 </div>
                 <div class="profile-card__social">
                 <!-- NOTA: actualiza los href con tus URLs reales -->
-                <a href="https://www.instagram.com/myo_gg/" target="_blank" aria-label="Instagram">
-                    <img src="./images/logo-instagram.webp" alt="Instagram">
-                </a>
-                <a href="https://x.com/zMyo_gg" target="_blank" aria-label="Twitter">
-                    <img src="./images/logo-twitter.webp" alt="Twitter">
-                </a>
-</div>
+                    <a href="https://www.instagram.com/myo_gg/" target="_blank" aria-label="Instagram">
+                        <img src="./images/logo-instagram.webp" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/zMyo_gg" target="_blank" aria-label="Twitter">
+                        <img src="./images/logo-twitter.webp" alt="Twitter">
+                    </a>
+                    <a href="https://www.freelancer.es/u/zMyo" target="_blank" aria-label="Freelancer">
+                        <img src="./images/logo-freelancer.png" alt="Freelancer">
+                    </a>
+                </div>
         </section>
 
         <!-- PROJECTS GALLERY -->
         <section id="projects" class="projects">
-            <h2>Galería de Proyectos</h2>
-            <p>Todos mis proyectos web incluyendo mis primeras practicas, plantillas y aplicaciones interactivas.</p>
+            <h2 data-i18n="projects_title">Galería de Proyectos</h2>
+            <p data-i18n="projects_subtitle">Todos mis proyectos web incluyendo mis primeras practicas, plantillas y aplicaciones interactivas.</p>
             
                     <div class="projects__filters">
                         <button class="filter-btn active" data-filter="all">Todos</button>
@@ -219,7 +224,7 @@
         <!-- SKILLS SECTION -->
         <section id="skills" class="skills">
             <div class="skills__main">
-                <h2>Habilidades y Competencia</h2>
+                <h2 data-i18n="skills_title">Habilidades y Competencia</h2>
                 <p>Desglose de mis habilidades de desarrollo web core y experiencia práctica.</p>
                 
                 <div class="skill-item">
@@ -274,15 +279,15 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="contact">
             <div class="contact__form-container">
-                <h2>Ponte en contacto</h2>
-                <p>Estoy disponible para proyectos freelance y oportunidades a tiempo completo.</p>
+                <h2 data-i18n="skills_title">Ponte en contacto</h2>
+                <p data-i18n="contact_subtitle">Estoy disponible para proyectos freelance y oportunidades a tiempo completo.</p>
                 <form id="contactForm" class="form">
                     <div class="form-group">
-                        <label>Nombre completo</label>
+                        <label data-i18n="form_name">Nombre completo</label>
                         <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
                     </div>
                     <div class="form-group">
-                        <label>Correo electrónico</label>
+                        <label data-i18n="form_email">Correo electrónico</label>
                         <input type="email" name="email" placeholder="juan@ejemplo.com" required>
                     </div>
                     <div class="form-group">
@@ -306,6 +311,9 @@
                         </a>
                         <a href="https://x.com/zMyo_gg" target="_blank" aria-label="Twitter" class="contact-social">
                             <img src="./images/logo-twitter.webp" alt="Twitter">
+                        </a>
+                        <a href="https://www.freelancer.es/u/zMyo" target="_blank" aria-label="Freelancer" class="contact-social">
+                            <img src="./images/logo-freelancer.png" alt="Freelancer">
                         </a>
                     </div>
                 </div>
