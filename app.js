@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 form_email: 'Correo electrónico',
                 form_message: 'Mensaje',
                 form_submit: 'Enviar mensaje',
-                form_message_placeholder: 'Háblame de las metas de tu proyecto...',
                 contact_quick: 'Contacto Rápido',
                 contact_location: 'Ubicación: Ica, Perú',
                 contact_email: 'Email: jesustl1232@gmail.com',
