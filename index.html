@@ -15,22 +15,28 @@
 
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="navbar__logo">
-            <span class="logo-icon">&lt;/&gt;</span> Tic.dev
-        </div>
-        <nav class="navbar__links">
-            <a href="#home" data-i18n="nav_home">Inicio</a>
-            <a href="#projects" data-i18n="nav_projects">Proyectos</a>
-            <a href="#skills" data-i18n="nav_skills">Habilidades</a>
-            <a href="#contact" data-i18n="nav_contact">Contacto</a>
-        </nav>
-        <div class="navbar__actions">
-            <!-- Selector de idioma -->
-            <button id="lang-toggle" class="btn btn--outline btn--small" aria-label="Cambiar idioma">ES</button>
-            <!-- Botón dark mode -->
-            <button id="theme-toggle" class="btn btn--outline theme-toggle" aria-label="Cambiar tema">🌙</button>
-            <a href="#contact" class="btn btn--primary" data-i18n="nav_contact">Contactame</a>
-        </div>
+    <div class="navbar__logo">
+        <span class="logo-icon">&lt;/&gt;</span> Tic.dev
+    </div>
+
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="navbar__links" id="mobile-menu">
+        <a href="#home" data-i18n="navhome">Inicio</a>
+        <a href="#projects" data-i18n="navprojects">Proyectos</a>
+        <a href="#skills" data-i18n="navskills">Habilidades</a>
+        <a href="#contact" data-i18n="navcontact">Contacto</a>
+    </nav>
+
+    <div class="navbar__actions">
+        <button id="lang-toggle" class="btn btn--outline btn--small" aria-label="Cambiar idioma">ES</button>
+        <button id="theme-toggle" class="btn btn--outline theme-toggle" aria-label="Cambiar tema"></button>
+        <a href="#contact" class="btn btn--primary desktop-contact" data-i18n="navcontact">Contáctame</a>
+    </div>
     </header>
 
     <main>

@@ -129,7 +129,31 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCountElement.textContent = totalProjects;
     }
 
-        // ==========================================
+    // ==========================================
+    // LÓGICA DE navbar móvil
+    // ==========================================
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll(".navbar__links a");
+
+    if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("active");
+        menuToggle.classList.toggle("active", isOpen);
+        menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+    });
+
+    mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+    });
+    }
+    // ==========================================
     // LÓGICA DE IDIOMA (ES / EN)
     // ==========================================
     const langToggle = document.getElementById('lang-toggle');
