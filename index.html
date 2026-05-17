@@ -267,7 +267,7 @@
                 <div class="sidebar-box">
                     <h3 data-i18n="skills_sidebar_title">Frameworks y Herramientas</h3>
                     <div class="tools-grid">
-                       <!-- <span class="tool-tag">WordPress</span> 
+                    <!-- <span class="tool-tag">WordPress</span> 
                         <span class="tool-tag">Netlify</span>  -->
                         <span class="tool-tag">GitHub</span>
                         <span class="tool-tag">Visual Studio Code</span>
@@ -284,19 +284,21 @@
             <div class="contact__form-container">
                 <h2 data-i18n="contact_title">Ponte en contacto</h2>
                 <p data-i18n="contact_subtitle">Estoy disponible para proyectos freelance y oportunidades a tiempo completo.</p>
-                <form id="contactForm" class="form">
+                <form id="contactForm" action="https://formspree.io/f/xzdwpave" method="POST" class="form">
                     <div class="form-group">
-                        <label data-i18n="form_name">Nombre completo</label>
-                        <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-i18n="form_email">Correo electrónico</label>
-                        <input type="email" name="email" placeholder="juan@ejemplo.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-i18n="form_message">Mensaje</label>
-                        <textarea name="mensaje" rows="4" placeholder="Háblame de las metas de tu proyecto..." required></textarea>
-                    </div>
+                        <label for="nombre" data-i18n="formname">Nombre completo</label>
+                        <input id="nombre" type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="email" data-i18n="formemail">Correo electrónico</label>
+                        <input id="email" type="email" name="email" placeholder="juan@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="mensaje" data-i18n="formmessage">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Háblame de las metas de tu proyecto..." required></textarea>
+                        </div>
                     <button type="submit" class="btn btn--primary" data-i18n="form_submit">Enviar Mensaje</button>
                     </form>
             </div>
@@ -317,6 +319,9 @@
                         </a>
                         <a href="https://www.freelancer.es/u/zMyo" target="_blank" aria-label="Freelancer" class="contact-social">
                             <img src="./images/logo-freelancer.png" alt="Freelancer">
+                        </a>
+                        <a href="https://www.workana.com/freelancer/77923b516c475f0080038100eb09af68" target="_blank" aria-label="Workana" class="contact-social">
+                            <img src="./images/logo-workana.png" alt="Workana">
                         </a>
                     </div>
                 </div>

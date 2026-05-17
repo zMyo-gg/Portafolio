@@ -72,33 +72,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 3. SIMULACIÓN DE FORMULARIO DE CONTACTO
     // ==========================================
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+  // Validación extra y feedback del formulario (Formspree)
+    const form = document.getElementById("contactForm");
+    const statusDiv = document.getElementById("formStatus");
 
-            const formData = new FormData(contactForm);
-            const nombre = formData.get('nombre');
-            const email = formData.get('email');
-            const mensaje = formData.get('mensaje');
+    if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-            const destinatario = 'jesustl1232@gmail.com'; // <-- email de destino
-            const asunto = encodeURIComponent(`Nuevo mensaje desde el portafolio de ${nombre}`);
-            const cuerpo = encodeURIComponent(
-                `Nombre: ${nombre}\n` +
-                `Email: ${email}\n\n` +
-                `Mensaje:\n${mensaje}`
-            );
+        if (statusDiv) {
+        statusDiv.innerHTML = '<span style="color:#c2410c;">Enviando... por favor espera.</span>';
+        }
 
-            // Construimos el enlace mailto
-            const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+        const formData = new FormData(form);
 
-            // Abrimos el cliente de correo
-            window.location.href = mailtoLink;
-
-            // Opcional: limpiar el formulario
-            contactForm.reset();
+        try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+            Accept: "application/json"
+            }
         });
+
+        if (response.ok) {
+            if (statusDiv) {
+            statusDiv.innerHTML = '<span style="color:#15803d;">Mensaje enviado con éxito. Te responderé pronto.</span>';
+            }
+            form.reset();
+        } else {
+            const errorData = await response.json();
+
+            if (statusDiv) {
+            statusDiv.innerHTML = `<span style="color:#b91c1c;">Hubo un error: ${errorData.error || "Inténtalo de nuevo más tarde."}</span>`;
+            }
+        }
+        } catch (error) {
+        if (statusDiv) {
+            statusDiv.innerHTML = '<span style="color:#b91c1c;">Error de red, comprueba tu conexión.</span>';
+        }
+        }
+    });
     }
     
     // ==========================================

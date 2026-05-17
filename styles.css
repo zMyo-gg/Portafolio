@@ -470,6 +470,12 @@ section > p {
     transform: translateY(-1px);
 }
 
+.form-status {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    min-height: 24px;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
